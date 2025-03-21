@@ -1,0 +1,19 @@
+[
+    {
+        "make": "plymouth",
+        "fuel-type": "gas",
+        "body-style": "sedan",
+        "drive-wheels": "fwd",
+        "price": 6692,
+        "image_url": "https://example.com/car1.jpg"
+    },
+    {
+        "make": "dodge",
+        "fuel-type": "gas",
+        "body-style": "sedan",
+        "drive-wheels": "fwd",
+        "price": 7609,
+        "image_url": "https://example.com/car2.jpg"
+    }
+    // Add more car data as needed
+]
