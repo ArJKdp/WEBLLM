@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Suggestion Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Suggestion Form</h1>
+        <form id="car-form">
+            <label for="fuel-type">Fuel Type:</label>
+            <select name="fuel-type" id="fuel-type">
+                <option value="gas">Gas</option>
+               ="diesel">Diesel</option>
+            </select><br><br>
+            <label for="body-style">Body Style:</label>
+            <select name="body-style" id="body-style">
+                <option value="sedan">Sedan</option>
+                <option value="hatchback">Hatchback</option>
+                <option value="convertible">Convertible</option>
+                <option value="wagon">Wagon</option>
+            </select><br><br>
+            <label for="drive-wheels">Drive Wheels:</label>
+            <select name="drive-wheels" id="drive-wheels">
+                <option value="fwd">FWD</option>
+                <option value="rwd">RWD</option>
+                <option value="4wd">4WD</option>
+            </select><br><br>
+            <button type="button" onclick="getSuggestions()">Get Suggestions</button>
+        </form>
+        <div id="suggestions"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
