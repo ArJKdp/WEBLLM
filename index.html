@@ -1,38 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Suggestion Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚗 Know Your Car 🚗</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
+    <script src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Car Suggestion Form</h1>
-        <form id="car-form">
-            <label for="fuel-type">Fuel Type:</label>
-            <select name="fuel-type" id="fuel-type">
-                <option value="gas">Gas</option>
-                <option value="diesel">Diesel</option>
-            </select><br><br>
-            <label for="body-style">Body Style:</label>
-            <select name="body-style" id="body-style">
-               an">Sedan</option>
-                <option value="hatchback">Hatchback</option>
-                <option value="convertible">Convertible</option>
-                <option value="wagon">Wagon</option>
-            </select><br><br>
-            <label for="drive-wheels">Drive Wheels:</label>
-            <select name="drive-wheels" id="drive-wheels">
-                <option value="fwd">FWD</option>
-                <option value="rwd">RWD</option>
-                <option value="4wd">4WD</option>
-            </select><br><br>
-            <button type="button" onclick="getSuggestions()">Get Suggestions</button>
-        </form>
-        <div id="suggestions"></div>
-    </div>
-    <script src="script.js"></script>
+    <div class="container">
+        <header class="header">
+            <h1>🚗 Know Your Car 🚗</h1>
+            <p>Find the perfect car based on your preferences!</p>
+        </header>
+
+        <form id="car-form" onsubmit="getSuggestions(event)">
+            <div class="form-group">
+                <label for="fuel-type">
+                    <img src="icons/fuel.png" alt="Fuel Icon" class="icon"> Fuel Type:
+                </label>
+                <select name="fuel-type" id="fuel-type">
+                    <option value="gas">Gas</option>
+                    <option value="diesel">Diesel</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="body-style">
+                    <img src="icons/body.png" alt="Body Style Icon" class="icon"> Body Style:
+                </label>
+                <select name="body-style" id="body-style">
+                    <option value="sedan">Sedan</option>
+                    <option value="hatchback">Hatchback</option>
+                    <option value="convertible">Convertible</option>
+                    <option value="wagon">Wagon</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="drive-wheels">
+                    <img src="icons/wheels.png" alt="Drive Wheels Icon" class="icon"> Drive Wheels:
+                </label>
+                <select name="drive-wheels" id="drive-wheels">
+                    <option value="fwd">FWD</option>
+                    <option value="rwd">RWD</option>
+                    <option value="4wd">4WD</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">🚀 Get Suggestions</button>
+        </form>
+
+        <div id="suggestions" class="suggestions-container"></div>
+
+        <div class="icons-preview">
+            <img src="icons/fuel.png" alt="Fuel Icon" class="icon">
+            <img src="icons/body.png" alt="Body Style Icon" class="icon">
+            <img src="icons/wheels.png" alt="Drive Wheels Icon" class="icon">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Made with ❤️ by Know Your Car Team</p>
+    </footer>
 </body>
 </html>
