@@ -134,7 +134,7 @@ async function displaySuggestions(suggestions) {
         icon: 'info',
         title: 'Suggestions Displayed',
         text: 'Click on a suggestion to view the image in a new tab!',
-        timer: 3000,
+        timer: 2000,
         showConfirmButton: false,
     });
 }
