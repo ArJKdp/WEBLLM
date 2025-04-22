@@ -153,18 +153,21 @@ async function fetchGoogleImage(query, apiKey, cx) {
     const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${cx}&key=${apiKey}&searchType=image&num=1`;
     console.log('API Request URL:', url); // Debugging
     try {
-        await sleep(1000); // Add a 1-second delay between requests
+        await sleep(2000); // Increase delay to 2 seconds between requests
         const response = await fetch(url);
+        console.log('API Response:', response); // Debugging
         if (!response.ok) {
             console.error('API Error:', response.status, response.statusText);
             return 'https://via.placeholder.com/400x300?text=No+Image+Found'; // Fallback image
         }
         const data = await response.json();
+        console.log('API Data:', data); // Debugging
         if (data.items && data.items.length > 0) {
             const imageUrl = data.items[0].link;
             imageCache[query] = imageUrl; // Cache the result
             return imageUrl;
         } else {
+            console.warn('No image found for query:', query);
             return 'https://via.placeholder.com/400x300?text=No+Image+Found'; // Fallback image
         }
     } catch (error) {
