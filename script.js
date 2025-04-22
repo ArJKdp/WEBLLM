@@ -153,7 +153,7 @@ async function fetchGoogleImage(query, apiKey, cx) {
     const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${cx}&key=${apiKey}&searchType=image&num=1`;
     console.log('API Request URL:', url); // Debugging
     try {
-        await sleep(2000); // Increase delay to 2 seconds between requests
+        await sleep(1000); // Increase delay to 2 seconds between requests
         const response = await fetch(url);
         console.log('API Response:', response); // Debugging
         if (!response.ok) {
