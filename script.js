@@ -88,7 +88,7 @@ async function displaySuggestions(suggestions) {
     const suggestionsDiv = document.getElementById('suggestions');
     suggestionsDiv.innerHTML = ''; // Clear previous suggestions
 
-    const googleApiKey = 'AIzaSyAZcj8THnTATnve-5ZDiCzf5qt1O_tAwM8'; // Replace with your Google API Key
+    const googleApiKey = 'AIzaSyClKmgGGtX7UVSkUfGlornkFpUeJHayV9c'; // Replace with your Google API Key
     const searchEngineId = 'e55325090f39c4714'; // Replace with your Search Engine ID (CX)
 
     for (const [index, car] of suggestions.entries()) {
